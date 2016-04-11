@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dd3b7f9b-7df5-4391-bb77-fb3cb4e5f40d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:47852/LDAPAuth.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LDAPAuth1.xsd" MetadataType="Schema" ID="7e2e7cf7-523d-451a-b79a-abe023a46a1a" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?xsd=xsd1" />
+    <MetadataFile FileName="LDAPAuth.disco" MetadataType="Disco" ID="d7ff73d3-5d57-41d7-93ad-26e0baf552e3" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?disco" />
+    <MetadataFile FileName="LDAPAuth.wsdl" MetadataType="Wsdl" ID="fb4c116b-fd60-4f73-9102-4b4435b10f68" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?wsdl" />
+    <MetadataFile FileName="LDAPAuth2.xsd" MetadataType="Schema" ID="e7593a79-03e8-4702-9c14-95708760e707" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

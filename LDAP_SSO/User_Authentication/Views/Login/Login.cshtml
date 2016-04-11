@@ -1,0 +1,51 @@
+﻿@model User_Authentication.Models.LoginUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true, "Login failed. Check your login details.");
+        <div>
+            <fieldset>
+                <legend>Login</legend>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Username)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Username)
+                    @Html.ValidationMessageFor(model => model.Username)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Password)
+                </div>
+                <div class="editor-field">
+                    @Html.PasswordFor(model => model.Password)
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Domain)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Domain)
+                    @Html.ValidationMessageFor(model => model.Domain)
+                </div>
+                <div class="editor-label">
+                    @Html.CheckBoxFor(model => model.RememberMe)
+                    @Html.LabelFor(model => model.RememberMe)
+                </div>
+                <input type="submit" value="Log In" />
+            </fieldset>
+        </div>
+    }
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿@model User_Authentication.Models.LoginUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>User Dashboard</h1>
+    <div>
+        
+    </div>
+    <span>
+        @if (Request.IsAuthenticated)
+        {
+            <strong>Welcome, @Html.Encode(User.Identity.Name)</strong>
+            @Html.ActionLink("Sign Out", "Logout", "Login")
+        }
+    </span> 
+    <div>
+
+    </div>
+</body>
+</html>
