@@ -13,11 +13,13 @@ namespace User_Authentication.Controllers
 
         public ActionResult Index()
         {
+            string userData = "";
             if (Request.IsAuthenticated)
             {
                 Models.LoginUser user = new Models.LoginUser();
                 user.Username = User.Identity.Name;
-                
+               userData= user.FetchUserDetails();
+               ViewData["USERDATA"] = userData;
             }
             else
             {

@@ -15,7 +15,7 @@ namespace Auth_Service
 
 
         // TODO: Add your service operations here
-      
+     
         [OperationContract]
         bool Authenticate(string username, string domain, string password, string ldapUrl);
 
@@ -24,6 +24,9 @@ namespace Auth_Service
 
         [OperationContract]
         List<Dictionary<string, string>> FindUser(string basedn, string ldapfilter);
+
+        [OperationContract]
+        List<Dictionary<string, string>> FetchUserDetails(string username);
     }
 
 

@@ -18,17 +18,27 @@ namespace Auth_Service
     public class LDAPAuth : IAuthenticate
     {
         LdapConnection connectionAuth;
+        static Dictionary<string, object> user= new Dictionary<string,object>();
         public bool Authenticate(string username, string domain, string password, string ldapUrl)
         {
             try
             {
                 var ldapUser = new LDAPUser(username, domain, ldapUrl, password);
-
                 /*checking using LDAP CN authentication*/
                 if (AuthenticateCN(ldapUser) || AuthenticateUID(ldapUser))
                 {
                     //user is authenticated
-                    //storeUserDetails(ldapUser);
+                    
+                    
+                    if (user.Keys.Contains(ldapUser.UserName))
+                    {
+                        user[ldapUser.UserName] = FindUser(ldapUser.BaseDN, "objectClass=*");
+                    }
+                    else
+                    {
+                        user.Add(ldapUser.UserName, FindUser(ldapUser.BaseDN, "objectClass=*"));
+                    }
+                    
                 }
                 else
                 {
@@ -130,6 +140,11 @@ namespace Auth_Service
             }
 
             return result;
+        }
+
+        public List<Dictionary<string, string>> FetchUserDetails(string username)
+        {
+            return (List<Dictionary<string, string>>)user[username];
         }
     }
 }

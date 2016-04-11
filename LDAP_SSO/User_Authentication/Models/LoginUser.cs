@@ -9,6 +9,8 @@ namespace User_Authentication.Models
 {
     public class LoginUser
     {
+
+        
         [Required]
         [Display(Name="User Name")]
         public string Username
@@ -41,10 +43,24 @@ namespace User_Authentication.Models
         public bool Message { get; set; }
         public bool Authenticate(string username, string password,string domain)
         {
-            LDAPAuth.AuthenticateClient authService = new AuthenticateClient();
+            LDAPAuth.AuthenticateClient   authService = new AuthenticateClient();
+            
             string ldapUrl = System.Configuration.ConfigurationManager.AppSettings["ldapUrl"];
             authService.InnerChannel.OperationTimeout = System.TimeSpan.MaxValue;
             return authService.Authenticate(username,domain,password,ldapUrl);
+        }
+
+        public string FetchUserDetails()
+        {
+            LDAPAuth.AuthenticateClient authService = new AuthenticateClient();
+            authService.InnerChannel.OperationTimeout = System.TimeSpan.MaxValue;
+            var searchResult = authService.FetchUserDetails(Username);
+            string result = "";
+            foreach (Dictionary<string, string> d in searchResult)
+            {
+                result +=String.Join("\r\n", d.Select(x => x.Key + ": " + x.Value).ToArray())+"\r\n";
+            }
+            return result;
         }
     }
 }

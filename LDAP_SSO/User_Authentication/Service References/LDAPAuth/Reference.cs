@@ -20,6 +20,12 @@ namespace User_Authentication.LDAPAuth {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticate/isAuthenticated", ReplyAction="http://tempuri.org/IAuthenticate/isAuthenticatedResponse")]
         bool isAuthenticated(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticate/FindUser", ReplyAction="http://tempuri.org/IAuthenticate/FindUserResponse")]
+        System.Collections.Generic.Dictionary<string, string>[] FindUser(string basedn, string ldapfilter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticate/FetchUserDetails", ReplyAction="http://tempuri.org/IAuthenticate/FetchUserDetailsResponse")]
+        System.Collections.Generic.Dictionary<string, string>[] FetchUserDetails(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +61,14 @@ namespace User_Authentication.LDAPAuth {
         
         public bool isAuthenticated(string username) {
             return base.Channel.isAuthenticated(username);
+        }
+        
+        public System.Collections.Generic.Dictionary<string, string>[] FindUser(string basedn, string ldapfilter) {
+            return base.Channel.FindUser(basedn, ldapfilter);
+        }
+        
+        public System.Collections.Generic.Dictionary<string, string>[] FetchUserDetails(string username) {
+            return base.Channel.FetchUserDetails(username);
         }
     }
 }

@@ -21,9 +21,10 @@
     <MetadataSource Address="http://localhost:47852/LDAPAuth.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LDAPAuth1.xsd" MetadataType="Schema" ID="7e2e7cf7-523d-451a-b79a-abe023a46a1a" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?xsd=xsd1" />
+    <MetadataFile FileName="LDAPAuth.xsd" MetadataType="Schema" ID="60e94c03-84d4-4e06-99df-dc194c11fa69" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?xsd=xsd2" />
     <MetadataFile FileName="LDAPAuth.disco" MetadataType="Disco" ID="d7ff73d3-5d57-41d7-93ad-26e0baf552e3" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?disco" />
     <MetadataFile FileName="LDAPAuth.wsdl" MetadataType="Wsdl" ID="fb4c116b-fd60-4f73-9102-4b4435b10f68" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?wsdl" />
+    <MetadataFile FileName="LDAPAuth1.xsd" MetadataType="Schema" ID="7e2e7cf7-523d-451a-b79a-abe023a46a1a" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?xsd=xsd1" />
     <MetadataFile FileName="LDAPAuth2.xsd" MetadataType="Schema" ID="e7593a79-03e8-4702-9c14-95708760e707" SourceId="1" SourceUrl="http://localhost:47852/LDAPAuth.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>

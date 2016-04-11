@@ -136,6 +136,9 @@
     <None Include="Service References\LDAPAuth\LDAPAuth.disco" />
     <None Include="Service References\LDAPAuth\configuration91.svcinfo" />
     <None Include="Service References\LDAPAuth\configuration.svcinfo" />
+    <None Include="Service References\LDAPAuth\LDAPAuth.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\LDAPAuth\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -161,7 +164,7 @@
     </None>
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\App\UserDetails.cshtml" />
+    <Content Include="Views\App\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
