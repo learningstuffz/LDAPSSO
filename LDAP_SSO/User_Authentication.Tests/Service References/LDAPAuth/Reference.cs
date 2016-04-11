@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace User_Authentication.LDAPAuth {
+namespace User_Authentication.Tests.LDAPAuth {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -29,12 +29,12 @@ namespace User_Authentication.LDAPAuth {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAuthenticateChannel : User_Authentication.LDAPAuth.IAuthenticate, System.ServiceModel.IClientChannel {
+    public interface IAuthenticateChannel : User_Authentication.Tests.LDAPAuth.IAuthenticate, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AuthenticateClient : System.ServiceModel.ClientBase<User_Authentication.LDAPAuth.IAuthenticate>, User_Authentication.LDAPAuth.IAuthenticate {
+    public partial class AuthenticateClient : System.ServiceModel.ClientBase<User_Authentication.Tests.LDAPAuth.IAuthenticate>, User_Authentication.Tests.LDAPAuth.IAuthenticate {
         
         public AuthenticateClient() {
         }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth_Service", "Auth_Service\Auth_Service.csproj", "{CC7AB3C6-34CA-4197-A8A4-FD910F7126C2}"
 EndProject
@@ -13,6 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_Authentication", "User
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_Authentication.Tests", "User_Authentication.Tests\User_Authentication.Tests.csproj", "{C0E871E5-B8FC-4BAD-A52E-26F53D2D1B8F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC7AB3C6-34CA-4197-A8A4-FD910F7126C2} = {CC7AB3C6-34CA-4197-A8A4-FD910F7126C2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

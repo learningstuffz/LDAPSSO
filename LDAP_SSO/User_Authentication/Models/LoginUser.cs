@@ -47,7 +47,8 @@ namespace User_Authentication.Models
             
             string ldapUrl = System.Configuration.ConfigurationManager.AppSettings["ldapUrl"];
             authService.InnerChannel.OperationTimeout = System.TimeSpan.MaxValue;
-            return authService.Authenticate(username,domain,password,ldapUrl);
+            bool retData=authService.Authenticate(username,domain,password,ldapUrl);
+            return retData;
         }
 
         public string FetchUserDetails()

@@ -39,6 +39,7 @@ namespace User_Authentication.Controllers
         [HttpGet]
         public ActionResult Login()
         {
+            ViewBag.Message = "REDIRECTED";
             return View();
         }
 
@@ -58,6 +59,7 @@ namespace User_Authentication.Controllers
                 else
                 {
                     ModelState.AddModelError("Error","");
+                    ViewData["Error"] = "AUTH FAILED";
                 }
                 
             }
